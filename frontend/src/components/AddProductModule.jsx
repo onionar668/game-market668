@@ -17,43 +17,56 @@ function AddProductModule() {
         <form onSubmit={addProduct} className="space-y-6">
           <div className="grid gap-6">
             <div className="flex flex-col">
-                <span className="label-text text-base font-medium">Product Name</span>
+              <span className="label-text text-base font-medium">Product Name</span>
               <label className="input">
-                  <Package2Icon  />
+                <Package2Icon />
                 <input
                   type="text"
                   placeholder="Enter product name"
                   className="grow"
                   value={formData.name}
                   onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                  />
-                  </label>
+                />
+              </label>
             </div>
             <div className="flex flex-col">
-                <span className="label-text text-base font-medium">Product Name</span>
+              <span className="label-text text-base font-medium">Price</span>
               <label className="input">
-                  <DollarSignIcon  />
+                <DollarSignIcon />
                 <input
                   type="number"
                   className="grow"
                   value={formData.price}
                   onChange={(e) => setFormData({ ...formData, price: e.target.value })}
-                  />
-                  </label>
+                />
+              </label>
             </div>
             <div className="flex flex-col">
-                <span className="label-text text-base font-medium">Image URL</span>
+              <span className="label-text text-base font-medium">Image URL</span>
               <label className="input">
-                  <ImageIcon />
+                <ImageIcon />
                 <input
                   type="text"
                   className="grow"
                   value={formData.img}
                   onChange={(e) => setFormData({ ...formData, img: e.target.value })}
-                  />
-                  </label>
+                />
+              </label>
             </div>
-      
+            <div className="flex flex-col">
+              <span className="label-text text-base font-medium">Category</span>
+              <select
+                className="select select-bordered"
+                value={formData.category || ""}
+                onChange={(e) => setFormData({ ...formData, category: e.target.value })}
+              >
+                <option value="">None</option>
+                <option value="game">Game</option>
+                <option value="accessory">Accessory</option>
+                <option value="collectible">Collectible</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
           </div>
 
           <div className="modal-action">

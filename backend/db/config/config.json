@@ -1,8 +1,8 @@
 {
   "development": {
-    "username": "postgres",
-    "password": "80026006agm",
-    "database": "game-market",
+    "username": "name",
+    "password": "password",
+    "database": "name_database",
     "host": "127.0.0.1",
     "dialect": "postgresql"
   },

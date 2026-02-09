@@ -32,7 +32,7 @@ function AddProductModule() {
             <div className="flex flex-col">
               <span className="label-text text-base font-medium">Price</span>
               <label className="input">
-                <DollarSignIcon />
+                ₸ 
                 <input
                   type="number"
                   className="grow"
